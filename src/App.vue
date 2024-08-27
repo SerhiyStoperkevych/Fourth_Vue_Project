@@ -1,21 +1,17 @@
 <template>
   <div class="app">
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
-    <TodoList />
+    <div>
+      <router-link to="/todo">Todo List</router-link>
+      <router-link to="/calculator">Calculator</router-link>
+    </div>
+    <div>
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
-import TodoList from './components/TodoList.vue';
-
 export default {
   name: 'App',
-  components: {
-    TodoList
-  }
 }
 </script>

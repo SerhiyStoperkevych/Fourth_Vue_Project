@@ -1,23 +1,23 @@
+import CalcView from "@/views/CalcView.vue";
+import TodoView from "@/views/TodoView.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "@/views/HomePage.vue";
-import AboutPage from "@/views/AboutPage.vue";
 
 const routes = [
     {
-        path: '/',
-        name: 'Home',
-        component: HomePage
+        path: '/calculator',
+        name: 'Calculator',
+        component: CalcView
     },
     {
-        path: '/about',
-        name: 'About',
-        component: AboutPage
+        path: '/todo',
+        name: 'Todo',
+        component: TodoView
     }
-];
+]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/'),
     routes
 });
 
-export default router;
+export default router
